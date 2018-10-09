@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>Jugar al domino</title>
+		<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+		<script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+	</head>
+	<body class="a-body ">
+		<a-scene environment="preset: yavapai">
+			<a-assets>
+				<img id="iconcasa" src="img/icon_casa.PNG">
+			</a-assets>
+			<a-link href="casa.html" image="#iconcasa" title="Volver a casa" position="1 1 -6" rotation="0 90 0">></a-link>
+			<a-plane color="blue" geometry="height: 2; width: 9" text__título="align: center; value: Situa el cursor encima de la esfera; width: 10" position="0 3 0" rotation="0 230 0" id="título"></a-plane>
+			<a-sphere id="sphere" position="-4.89 0.3 -1.81" radius="1.25" color="#EF2D5E" geometry="radius: 0.3">
+				<a-animation id="sphereAnimation" attribute="position" begin="mouseenter" dur="200" to="-4.90 0.3 -1.45"></a-animation>
+			</a-sphere>
+			<a-box position="-4.91 0.5 -1.05" rotation="0 -90 0" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id1">
+				<a-animation begin="startid1" dur="100" attribute="position" to="-4.91 0.25 -1.05"></a-animation>
+				<a-animation id="a1" begin="startid1" dur="100" attribute="rotation" to="0 -90 -75"></a-animation>
+			</a-box>
+			<a-box position="-4.91 0.5 -0.31" rotation="0 -90 0" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id2">
+				<a-animation begin="startid2" dur="100" attribute="position" to="-4.91 0.25 -0.31"></a-animation>
+				<a-animation id="a2" begin="startid2" dur="100" attribute="rotation" to="0 -90 -75"></a-animation>
+			</a-box>
+			<a-box position="-4.93 0.5 0.50" rotation="0 -90 0" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id3">
+				<a-animation begin="startid3" dur="100" attribute="position" to="-4.93 0.25 0.50"></a-animation>
+				<a-animation id="a3" begin="startid3" dur="100" attribute="rotation" to="0 -90 -75"></a-animation>
+			</a-box>
+			<a-box position="-4.84 0.5 1.37" rotation="0 -59.99 0" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id4">
+				<a-animation begin="startid4" dur="100" attribute="position" to="-4.84 0.25 1.37"></a-animation>
+				<a-animation id="a4" begin="startid4" dur="100" attribute="rotation" to="0 -59.99 -75"></a-animation>
+			</a-box>
+			<a-box position="-4.58 0.5 2.17" rotation="0 -46.73 0" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id5">
+				<a-animation begin="startid5" dur="100" attribute="position" to="-4.58 0.25 2.17"></a-animation>
+				<a-animation id="a5" begin="startid5" dur="100" attribute="rotation" to="0 -46.73 -75"></a-animation>
+			</a-box>
+			<a-box position="-4.02 0.5 2.78" rotation="0 -29.60 0" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id6">
+				<a-animation begin="startid6" dur="100" attribute="position" to="-4.02 0.25 2.78"></a-animation>
+				<a-animation id="a6" begin="startid6" dur="100" attribute="rotation" to="0 -29.60 -75"></a-animation>
+			</a-box>
+			<a-box position="-3.36 0.5 3" rotation="0 -11.35 0" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id7">
+				<a-animation begin="startid7" dur="100" attribute="position" to="-3.36 0.25 3"></a-animation>
+				<a-animation id="a7" begin="startid7" dur="100" attribute="rotation" to="0 -11.35 -75"></a-animation>
+			</a-box>
+			<a-box position="-2.60 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id8">
+				<a-animation begin="startid8" dur="100" attribute="position" to="-2.60 0.25 3"></a-animation>
+				<a-animation id="a8" begin="startid8" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="-1.80 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id9">
+				<a-animation begin="startid9" dur="100" attribute="position" to="-1.80 0.25 3"></a-animation>
+				<a-animation id="a9" begin="startid9" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="-1.16 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id10">
+				<a-animation begin="startid10" dur="100" attribute="position" to="-1.16 0.25 3"></a-animation>
+				<a-animation id="a10" begin="startid10" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="-0.45 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id11">
+				<a-animation begin="startid11" dur="100" attribute="position" to="-0.45 0.25 3"></a-animation>
+				<a-animation id="a11" begin="startid11" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="0.26 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id12">
+				<a-animation begin="startid12" dur="100" attribute="position" to="0.26 0.25 3"></a-animation>
+				<a-animation id="a12" begin="startid12" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="0.80 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id13">
+				<a-animation begin="startid13" dur="100" attribute="position" to="0.80 0.25 3"></a-animation>
+				<a-animation id="a13" begin="startid13" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="1.33 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id14">
+				<a-animation begin="startid14" dur="100" attribute="position" to="1.33 0.25 3"></a-animation>
+				<a-animation id="a14" begin="startid14" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="1.91 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id15">
+				<a-animation begin="startid15" dur="100" attribute="position" to="1.91 0.25 3"></a-animation>
+				<a-animation id="a15" begin="startid15" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="2.56 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id16">
+				<a-animation begin="startid16" dur="100" attribute="position" to="2.56 0.25 3"></a-animation>
+				<a-animation id="a16" begin="startid16" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="3.11 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id17">
+				<a-animation begin="startid17" dur="100" attribute="position" to="3.11 0.25 3"></a-animation>
+				<a-animation id="a17" begin="startid17" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="3.66 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id18">
+				<a-animation begin="startid18" dur="100" attribute="position" to="3.66 0.25 3"></a-animation>
+				<a-animation id="a18" begin="startid18" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="4.19 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id19">
+				<a-animation begin="startid19" dur="100" attribute="position" to="4.19 0.25 3"></a-animation>
+				<a-animation id="a19" begin="startid19" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="4.78 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id20">
+				<a-animation begin="startid20" dur="100" attribute="position" to="4.78 0.25 3"></a-animation>
+				<a-animation id="a20" begin="startid20" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="5.48 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id21">
+				<a-animation begin="startid21" dur="100" attribute="position" to="5.48 0.25 3"></a-animation>
+				<a-animation id="a21" begin="startid21" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="6.08 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id22">
+				<a-animation begin="startid22" dur="100" attribute="position" to="6.08 0.25 3"></a-animation>
+				<a-animation id="a22" begin="startid22" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="6.614 0.5 3" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id23">
+				<a-animation begin="startid23" dur="100" attribute="position" to="6.614 0.25 3"></a-animation>
+				<a-animation id="a23" begin="startid23" dur="100" attribute="rotation" to="0 0 -75"></a-animation>
+			</a-box>
+			<a-box position="7.35 0.5 3.02" rotation="0.2 20.03 -3.13" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id24">
+				<a-animation begin="startid24" dur="100" attribute="position" to="7.35 0.25 3.02"></a-animation>
+				<a-animation id="a24" begin="startid24" dur="100" attribute="rotation" to="0.2 20.03 -75"></a-animation>
+			</a-box>
+			<a-box position="7.93 0.5 2.89" rotation="0.2 30.97 -3.13" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id25">
+				<a-animation begin="startid25" dur="100" attribute="position" to="7.93 0.25 2.89"></a-animation>
+				<a-animation id="a25" begin="startid25" dur="100" attribute="rotation" to="0.2 30.97 -75"></a-animation>
+			</a-box>
+			<a-box position="8.42 0.5 2.53" rotation="0.2 30.97 -3.13" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id26">
+				<a-animation begin="startid26" dur="100" attribute="position" to="8.42 0.25 2.53"></a-animation>
+				<a-animation id="a26" begin="startid26" dur="100" attribute="rotation" to="0.2 30.97 -75"></a-animation>
+			</a-box>
+			<a-box position="8.87 0.5 2.06" rotation="0.2 45.43 -3.13" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id27">
+				<a-animation begin="startid27" dur="100" attribute="position" to="8.87 0.25 2.06"></a-animation>
+				<a-animation id="a27" begin="startid27" dur="100" attribute="rotation" to="0.2 45.43 -75"></a-animation>
+			</a-box>
+			<a-box position="9.13 0.5 1.36" rotation="0.20 57.96 -3.13" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id28">
+				<a-animation begin="startid28" dur="100" attribute="position" to="9.13 0.25 1.36"></a-animation>
+				<a-animation id="a28" begin="startid28" dur="100" attribute="rotation" to="0.20 57.96 -75"></a-animation>
+			</a-box>
+			<a-box position="9.30 0.5 0.60" rotation="0.2 75.32 -3.13" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id29">
+				<a-animation begin="startid29" dur="100" attribute="position" to="9.30 0.25 0.60"></a-animation>
+				<a-animation id="a29" begin="startid29" dur="100" attribute="rotation" to="0.2 75.32 -75"></a-animation>
+			</a-box>
+			<a-box position="9.30 0.5 -0.15" rotation="2 -90.33 -178.49" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id30">
+				<a-animation begin="startid30" dur="100" attribute="position" to="9.30 0.25 -0.15"></a-animation>
+				<a-animation id="a30" begin="startid30" dur="100" attribute="rotation" to="2 -90.33 -75"></a-animation>
+			</a-box>
+			<a-box position="9.30 0.5 -0.91" rotation="2 -74.41 -176.79" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id31">
+				<a-animation begin="startid31" dur="100" attribute="position" to="9.30 0.25 -0.91"></a-animation>
+				<a-animation id="a31" begin="startid31" dur="100" attribute="rotation" to="2 -74.41 -75"></a-animation>
+			</a-box>
+			<a-box position="9.09 0.5 -1.59" rotation="2 -65.58 -176.79" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id32">
+				<a-animation begin="startid32" dur="100" attribute="position" to="9.09 0.25 -1.59"></a-animation>
+				<a-animation id="a32" begin="startid32" dur="100" attribute="rotation" to="2 -65.58 -75"></a-animation>
+			</a-box>
+			<a-box position="8.73 0.5 -2.20" rotation="2 -63.46 -176.79" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id33">
+				<a-animation begin="startid33" dur="100" attribute="position" to="8.73 0.25 -2.20"></a-animation>
+				<a-animation id="a33" begin="startid33" dur="100" attribute="rotation" to="2 -63.46 -75"></a-animation>
+			</a-box>
+			<a-box position="8.22 0.5 -2.78" rotation="2 -52.96 -176.79" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id34">
+				<a-animation begin="startid34" dur="100" attribute="position" to="8.22 0.25 -2.78"></a-animation>
+				<a-animation id="a34" begin="startid34" dur="100" attribute="rotation" to="2 -52.96 -75"></a-animation>
+			</a-box>
+			<a-box position="7.69 0.5 -3.32" rotation="2 -38.26 -176.79" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id35">
+				<a-animation begin="startid35" dur="100" attribute="position" to="7.69 0.25 -3.32"></a-animation>
+				<a-animation id="a35" begin="startid35" dur="100" attribute="rotation" to="2 -38.26 -75"></a-animation>
+			</a-box>
+			<a-box position="6.94 0.5 -3.66" rotation="2.78 -14.44 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id36">
+				<a-animation begin="startid36" dur="100" attribute="position" to="6.94 0.25 -3.66"></a-animation>
+				<a-animation id="a36" begin="startid36" dur="100" attribute="rotation" to="2.78 -14.44 -75"></a-animation>
+			</a-box>
+			<a-box position="6.12 0.5 -3.75" rotation="2.78 0.23 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id37">
+				<a-animation begin="startid37" dur="100" attribute="position" to="6.12 0.25 -3.75"></a-animation>
+				<a-animation id="a37" begin="startid37" dur="100" attribute="rotation" to="2.78 0.23 -75"></a-animation>
+			</a-box>
+			<a-box position="5.34 0.5 -3.61" rotation="2.78 16.45 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id38">
+				<a-animation begin="startid38" dur="100" attribute="position" to="5.34 0.25 -3.61"></a-animation>
+				<a-animation id="a38" begin="startid38" dur="100" attribute="rotation" to="2.78 16.45 -75"></a-animation>
+			</a-box>
+			<a-box position="4.68 0.5 -3.35" rotation="2.78 25.75 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id39">
+				<a-animation begin="startid39" dur="100" attribute="position" to="4.68 0.25 -3.35"></a-animation>
+				<a-animation id="a39" begin="startid39" dur="100" attribute="rotation" to="2.78 25.75 -75"></a-animation>
+			</a-box>
+			<a-box position="4.14 0.5 -2.94" rotation="2.78 37.01 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id40">
+				<a-animation begin="startid40" dur="100" attribute="position" to="4.14 0.25 -2.94"></a-animation>
+				<a-animation id="a40" begin="startid40" dur="100" attribute="rotation" to="2.78 37.01 -75"></a-animation>
+			</a-box>
+			<a-box position="3.70 0.5 -2.39" rotation="2.78 37.01 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id41">
+				<a-animation begin="startid41" dur="100" attribute="position" to="3.70 0.25 -2.39"></a-animation>
+				<a-animation id="a41" begin="startid41" dur="100" attribute="rotation" to="2.78 37.01 -75"></a-animation>
+			</a-box>
+			<a-box position="3.27 0.5 -1.84" rotation="2.78 44.76 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id42">
+				<a-animation begin="startid42" dur="100" attribute="position" to="3.27 0.25 -1.84"></a-animation>
+				<a-animation id="a42" begin="startid42" dur="100" attribute="rotation" to="2.78 44.76 -75"></a-animation>
+			</a-box>
+			<a-box position="2.88 0.5 -1.22" rotation="2.78 49.34 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id43">
+				<a-animation begin="startid43" dur="100" attribute="position" to="2.88 0.25 -1.22"></a-animation>
+				<a-animation id="a43" begin="startid43" dur="100" attribute="rotation" to="2.78 49.34 -75"></a-animation>
+			</a-box>
+			<a-box position="2.55 0.5 -0.68" rotation="2.78 50.452 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id44">
+				<a-animation begin="startid44" dur="100" attribute="position" to="2.55 0.25 -0.68"></a-animation>
+				<a-animation id="a44" begin="startid44" dur="100" attribute="rotation" to="2.78 50.452 -75"></a-animation>
+			</a-box>
+			<a-box position="2.06 0.5 -0.13" rotation="2.78 39.9 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id45">
+				<a-animation begin="startid45" dur="100" attribute="position" to="2.06 0.25 -0.13"></a-animation>
+				<a-animation id="a45" begin="startid45" dur="100" attribute="rotation" to="2.78 39.9 -75"></a-animation>
+			</a-box>
+			<a-box position="1.61 0.5 0.40" rotation="2.78 39.9 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id46">
+				<a-animation begin="startid46" dur="100" attribute="position" to="1.61 0.25 0.40"></a-animation>
+				<a-animation id="a46" begin="startid46" dur="100" attribute="rotation" to="2.78 39.9 -75"></a-animation>
+			</a-box>
+			<a-box position="1.01 0.5 0.65" rotation="2.78 22.71 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id47">
+				<a-animation begin="startid47" dur="100" attribute="position" to="1.01 0.25 0.65"></a-animation>
+				<a-animation id="a47" begin="startid47" dur="100" attribute="rotation" to="2.78 22.71 -75"></a-animation>
+			</a-box>
+			<a-box position="0.37 0.5 0.77" rotation="2.78 8.39 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id48">
+				<a-animation begin="startid48" dur="100" attribute="position" to="0.37 0.25 0.77"></a-animation>
+				<a-animation id="a48" begin="startid48" dur="100" attribute="rotation" to="2.78 8.39 -75"></a-animation>
+			</a-box>
+			<a-box position="-0.29 0.5 0.85" rotation="2.78 0.79 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id49">
+				<a-animation begin="startid49" dur="100" attribute="position" to="-0.29 0.25 0.85"></a-animation>
+				<a-animation id="a49" begin="startid49" dur="100" attribute="rotation" to="2.78 0.79 -75"></a-animation>
+			</a-box>
+			<a-box position="-0.84 0.5 0.85" rotation="2.78 -9.81 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id50">
+				<a-animation begin="startid50" dur="100" attribute="position" to="-0.84 0.25 0.85"></a-animation>
+				<a-animation id="a50" begin="startid50" dur="100" attribute="rotation" to="2.78 -9.81 -75"></a-animation>
+			</a-box>
+			<a-box position="-1.42 0.5 0.72" rotation="2.78 -10.90 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id51">
+				<a-animation begin="startid51" dur="100" attribute="position" to="-1.42 0.25 0.72"></a-animation>
+				<a-animation id="a51" begin="startid51" dur="100" attribute="rotation" to="2.78 -10.90 -75"></a-animation>
+			</a-box>
+			<a-box position="-1.95 0.5 0.50" rotation="2.78 -16.47 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id52">
+				<a-animation begin="startid52" dur="100" attribute="position" to="-1.95 0.25 0.50"></a-animation>
+				<a-animation id="a52" begin="startid52" dur="100" attribute="rotation" to="2.78 -16.47 -75"></a-animation>
+			</a-box>
+			<a-box position="-2.45 0.5 0.18" rotation="2.78 -21.13 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id53">
+				<a-animation begin="startid53" dur="100" attribute="position" to="-2.45 0.25 0.18"></a-animation>
+				<a-animation id="a53" begin="startid53" dur="100" attribute="rotation" to="2.78 -21.13 -75"></a-animation>
+			</a-box>
+			<a-box position="-2.95 0.5 -0.12" rotation="2.78 -26.50 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id54">
+				<a-animation begin="startid54" dur="100" attribute="position" to="-2.95 0.25 -0.12"></a-animation>
+				<a-animation id="a54" begin="startid54" dur="100" attribute="rotation" to="2.78 -26.50 -75"></a-animation>
+			</a-box>
+			<a-box position="-3.34 0.5 -0.64" rotation="2.78 -48.02 -175.80" color="#4CC3D9" geometry="width: 0.21; depth: 0.7" id="id55">
+				<a-animation begin="startid55" dur="100" attribute="position" to="-3.34 0.25 -0.64"></a-animation>
+				<a-animation id="a55" begin="startid55" dur="100" attribute="rotation" to="2.78 -48.02 -75"></a-animation>
+			</a-box>
+			<a-camera id="camera" position="-6.6 1 -6.5" rotation="-10 213 0">
+				<a-cursor color="#66ffff"></a-cursor>
+			</a-camera>
+		</a-scene>
+		<script>
+			sphereAnimation.addEventListener('animationend', function () {document.querySelector('#id1').emit('startid1');});
+			a1.addEventListener('animationend', function () {document.querySelector('#id2').emit('startid2');});
+			a2.addEventListener('animationend', function () {document.querySelector('#id3').emit('startid3');});
+			a3.addEventListener('animationend', function () {document.querySelector('#id4').emit('startid4');});
+			a4.addEventListener('animationend', function () {document.querySelector('#id5').emit('startid5');});
+			a5.addEventListener('animationend', function () {document.querySelector('#id6').emit('startid6');});
+			a6.addEventListener('animationend', function () {document.querySelector('#id7').emit('startid7');});
+			a7.addEventListener('animationend', function () {document.querySelector('#id8').emit('startid8');});
+			a8.addEventListener('animationend', function () {document.querySelector('#id9').emit('startid9');});
+			a9.addEventListener('animationend', function () {document.querySelector('#id10').emit('startid10');});
+			a10.addEventListener('animationend', function () {document.querySelector('#id11').emit('startid11');});
+			a11.addEventListener('animationend', function () {document.querySelector('#id12').emit('startid12');});
+			a12.addEventListener('animationend', function () {document.querySelector('#id13').emit('startid13');});
+			a13.addEventListener('animationend', function () {document.querySelector('#id14').emit('startid14');});
+			a14.addEventListener('animationend', function () {document.querySelector('#id15').emit('startid15');});
+			a15.addEventListener('animationend', function () {document.querySelector('#id16').emit('startid16');});
+			a16.addEventListener('animationend', function () {document.querySelector('#id17').emit('startid17');});
+			a17.addEventListener('animationend', function () {document.querySelector('#id18').emit('startid18');});
+			a18.addEventListener('animationend', function () {document.querySelector('#id19').emit('startid19');});
+			a19.addEventListener('animationend', function () {document.querySelector('#id20').emit('startid20');});
+			a20.addEventListener('animationend', function () {document.querySelector('#id21').emit('startid21');});
+			a21.addEventListener('animationend', function () {document.querySelector('#id22').emit('startid22');});
+			a22.addEventListener('animationend', function () {document.querySelector('#id23').emit('startid23');});
+			a23.addEventListener('animationend', function () {document.querySelector('#id24').emit('startid24');});
+			a24.addEventListener('animationend', function () {document.querySelector('#id25').emit('startid25');});
+			a25.addEventListener('animationend', function () {document.querySelector('#id26').emit('startid26');});
+			a26.addEventListener('animationend', function () {document.querySelector('#id27').emit('startid27');});
+			a27.addEventListener('animationend', function () {document.querySelector('#id28').emit('startid28');});
+			a28.addEventListener('animationend', function () {document.querySelector('#id29').emit('startid29');});
+			a29.addEventListener('animationend', function () {document.querySelector('#id30').emit('startid30');});
+			a30.addEventListener('animationend', function () {document.querySelector('#id31').emit('startid31');});
+			a31.addEventListener('animationend', function () {document.querySelector('#id32').emit('startid32');});
+			a32.addEventListener('animationend', function () {document.querySelector('#id33').emit('startid33');});
+			a33.addEventListener('animationend', function () {document.querySelector('#id34').emit('startid34');});
+			a34.addEventListener('animationend', function () {document.querySelector('#id35').emit('startid35');});
+			a35.addEventListener('animationend', function () {document.querySelector('#id36').emit('startid36');});
+			a36.addEventListener('animationend', function () {document.querySelector('#id37').emit('startid37');});
+			a37.addEventListener('animationend', function () {document.querySelector('#id38').emit('startid38');});
+			a38.addEventListener('animationend', function () {document.querySelector('#id39').emit('startid39');});
+			a39.addEventListener('animationend', function () {document.querySelector('#id40').emit('startid40');});
+			a40.addEventListener('animationend', function () {document.querySelector('#id41').emit('startid41');});
+			a41.addEventListener('animationend', function () {document.querySelector('#id42').emit('startid42');});
+			a42.addEventListener('animationend', function () {document.querySelector('#id43').emit('startid43');});
+			a43.addEventListener('animationend', function () {document.querySelector('#id44').emit('startid44');});
+			a44.addEventListener('animationend', function () {document.querySelector('#id45').emit('startid45');});
+			a45.addEventListener('animationend', function () {document.querySelector('#id46').emit('startid46');});
+			a46.addEventListener('animationend', function () {document.querySelector('#id47').emit('startid47');});
+			a47.addEventListener('animationend', function () {document.querySelector('#id48').emit('startid48');});
+			a48.addEventListener('animationend', function () {document.querySelector('#id49').emit('startid49');});
+			a49.addEventListener('animationend', function () {document.querySelector('#id50').emit('startid50');});
+			a50.addEventListener('animationend', function () {document.querySelector('#id51').emit('startid51');});
+			a51.addEventListener('animationend', function () {document.querySelector('#id52').emit('startid52');});
+			a52.addEventListener('animationend', function () {document.querySelector('#id53').emit('startid53');});
+			a53.addEventListener('animationend', function () {document.querySelector('#id54').emit('startid54');});
+			a54.addEventListener('animationend', function () {document.querySelector('#id55').emit('startid55');});
+		</script>
+	</body>
+</html>

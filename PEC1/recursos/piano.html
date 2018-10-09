@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>Jugar al piano</title>
+		<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+		<script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js">  </script>
+	</head>
+	<body class="a-body ">
+		<a-scene environment="preset: yavapai">
+			<a-assets>
+				<audio id="sounddo" src="son/do.mp3" preload="yes"></audio>
+				<audio id="soundre" src="son/re.mp3" preload="yes"></audio>
+				<audio id="soundmi" src="son/mi.mp3" preload="yes"></audio>
+				<audio id="soundfa" src="son/fa.mp3" preload="yes"></audio>
+				<audio id="soundsol" src="son/sol.mp3" preload="yes"></audio>
+				<audio id="soundla" src="son/la.mp3" preload="yes"></audio>
+				<audio id="soundsi" src="son/si.mp3" preload="yes"></audio>
+				<audio id="sounddob" src="son/dob.mp3" preload="yes"></audio>
+				<img id="iconcasa" src="img/icon_casa.PNG">
+			</a-assets>
+			<a-entity id="esounddo" sound="src: #sounddo"></a-entity>
+			<a-entity id="esoundre" sound="src: #soundre"></a-entity>
+			<a-entity id="esoundmi" sound="src: #soundmi"></a-entity>
+			<a-entity id="esoundfa" sound="src: #soundfa"></a-entity>
+			<a-entity id="esoundsol" sound="src: #soundsol"></a-entity>
+			<a-entity id="esoundla" sound="src: #soundla"></a-entity>
+			<a-entity id="esoundsi" sound="src: #soundsi"></a-entity>
+			<a-entity id="esounddob" sound="src: #sounddob"></a-entity>
+			<a-plane color="blue" geometry="height: 1; width: 5" text__título="align: center; value: Situa el cursor encima de las teclas para escucharlas; width: 5" position="0 4.5 0"id="título"></a-plane>
+			<a-box color="black" geometry="width: 5.15; height: 2" position="0 2 0" id="base" scale="1 1 0.2"></a-box>
+			<a-link href="casa.html" image="#iconcasa" title="Volver a casa" position="-5 2 0">></a-link>
+			<a-box color="white" geometry="height: 1.75; width: 0.25;" position="-2.1 1.86 0.2" id="tec1" scale="1 1 0.13">
+				<a-animation id="startdob" begin="mouseenter" attribute="material.color" from="white" to="red" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseenter" dur="500" from="-2.1 1.86 0.2" to="-2.1 1.86 0.1"></a-animation>
+				<a-animation id="stopdob" attribute="material.color" begin="mouseleave" from="red" to="white" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseleave" dur="500" from="-2.1 1.86 0.1" to="-2.1 1.86 0.2"></a-animation>
+			</a-box>
+			<a-box color="white" geometry="height: 1.75; width: 0.25;" position="-1.5 1.86 0.2" id="tec2" scale="1 1 0.13">
+				<a-animation id="startre" begin="mouseenter" attribute="material.color" from="white" to="red" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseenter" dur="500" from="-1.5 1.86 0.2" to="-1.5 1.86 0.1"></a-animation>
+				<a-animation id="stopre" attribute="material.color" begin="mouseleave" from="red" to="white" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseleave" dur="500" from="-1.5 1.86 0.1" to="-1.5 1.86 0.2"></a-animation>
+			</a-box>
+			<a-box color="white" geometry="height: 1.75; width: 0.25;" position="-0.9 1.86 0.2" id="tec3" scale="1 1 0.13">
+				<a-animation id="startmi" begin="mouseenter" attribute="material.color" from="white" to="red" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseenter" dur="500" from="-0.9 1.86 0.2" to="-0.9 1.86 0.1"></a-animation>
+				<a-animation id="stopmi" attribute="material.color" begin="mouseleave" from="red" to="white" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseleave" dur="500" from="-0.9 1.86 0.1" to="-0.9 1.86 0.2"></a-animation>
+			</a-box>
+			<a-box color="white" geometry="height: 1.75; width: 0.25;" position="-0.3 1.86 0.2" id="tec4" scale="1 1 0.13">
+				<a-animation id="startfa" begin="mouseenter" attribute="material.color" from="white" to="red" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseenter" dur="500" from="-0.3 1.86 0.2" to="-0.3 1.86 0.1"></a-animation>
+				<a-animation id="stopfa" attribute="material.color" begin="mouseleave" from="red" to="white" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseleave" dur="500" from="-0.3 1.86 0.1" to="-0.3 1.86 0.2"></a-animation>
+			</a-box>
+			<a-box color="white" geometry="height: 1.75; width: 0.25;" position="0.3 1.86 0.2" id="tec5" scale="1 1 0.13">
+				<a-animation id="startsol" begin="mouseenter" attribute="material.color" from="white" to="red" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseenter" dur="500" from="0.3 1.86 0.2" to="0.3 1.86 0.1"></a-animation>
+				<a-animation id="stopsol" attribute="material.color" begin="mouseleave" from="red" to="white" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseleave" dur="500" from="0.3 1.86 0.1" to="0.3 1.86 0.2"></a-animation>
+			</a-box>
+				<a-box color="white" geometry="height: 1.75; width: 0.25;" position="0.9 1.86 0.2" id="tec6" scale="1 1 0.13">
+				<a-animation id="startla" begin="mouseenter" attribute="material.color" from="white" to="red" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseenter" dur="500" from="0.9 1.86 0.2" to="0.9 1.86 0.1"></a-animation>
+				<a-animation id="stopla" attribute="material.color" begin="mouseleave" from="red" to="white" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseleave" dur="500" from="0.9 1.86 0.1" to="0.9 1.86 0.2"></a-animation>
+			</a-box>
+				<a-box color="white" geometry="height: 1.75; width: 0.25;" position="1.5 1.86 0.2" id="tec7" scale="1 1 0.13">
+				<a-animation id="startsi" begin="mouseenter" attribute="material.color" from="white" to="red" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseenter" dur="500" from="1.5 1.86 0.2" to="1.5 1.86 0.1"></a-animation>
+				<a-animation id="stopsi" attribute="material.color" begin="mouseleave" from="red" to="white" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseleave" dur="500" from="1.5 1.86 0.1" to="1.5 1.86 0.2"></a-animation>
+			</a-box>
+			<a-box color="white" geometry="height: 1.75; width: 0.25;" position="2.1 1.86 0.2" id="tec8" scale="1 1 0.13">
+				<a-animation id="startdo" begin="mouseenter" attribute="material.color" from="white" to="red" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseenter" dur="500" from="2.1 1.86 0.2" to="2.1 1.86 0.1"></a-animation>
+				<a-animation id="stopdo" attribute="material.color" begin="mouseleave" from="red" to="white" dur="500"></a-animation>
+				<a-animation attribute="position" begin="mouseleave" dur="500" from="2.1 1.86 0.1" to="2.1 1.86 0.2"></a-animation>
+			</a-box>
+			<a-camera id="camera" position="0 0 5">
+				<a-cursor color="#66ffff"></a-cursor>
+			</a-camera>
+		</a-scene>
+		<script>
+			startdo.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esounddo');
+				entity.components.sound.playSound();
+			});
+			stopdo.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esounddo');
+				entity.components.sound.stopSound();
+			});
+			startre.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundre');
+				entity.components.sound.playSound();
+			});
+			stopre.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundre');
+				entity.components.sound.stopSound();
+			});
+			startmi.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundmi');
+				entity.components.sound.playSound();
+			});
+			stopmi.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundmi');
+				entity.components.sound.stopSound();
+			});
+			startfa.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundfa');
+				entity.components.sound.playSound();
+			});
+			stopfa.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundfa');
+				entity.components.sound.stopSound();
+			});
+			startsol.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundsol');
+				entity.components.sound.playSound();
+			});
+			stopsol.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundsol');
+				entity.components.sound.stopSound();
+			});
+			startla.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundla');
+				entity.components.sound.playSound();
+			});
+			stopla.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundla');
+				entity.components.sound.stopSound();
+			});
+			startsi.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundsi');
+				entity.components.sound.playSound();
+			});
+			stopsi.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esoundsi');
+				entity.components.sound.stopSound();
+			});
+			startdob.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esounddob');
+				entity.components.sound.playSound();
+			});
+			stopdob.addEventListener('animationstart', function () {
+				var entity = document.querySelector('#esounddob');
+				entity.components.sound.stopSound();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>Inicio recorrido virtual</title>
+		<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+		<script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+	</head>
+	<body class="a-body ">
+		<a-scene environment="preset: yavapai">
+			<a-assets>
+				<img id="cesped" src="recursos/img/cesped.jpg">
+				<img id="puerta" src="recursos/img/puerta.jpg">
+				<img id="ladrillos" src="recursos/img/pared.jpg">
+				<img id="techo" src="recursos/img/techo.jpg">
+				<img id="iconodom" src="recursos/img/icon_dom.PNG">
+				<img id="iconomus" src="recursos/img/icon_mus.PNG">
+				<a-asset-item id="objecte" src="recursos/obj/DeadTree.obj"></a-asset-item>
+				<a-asset-item id="objecte-mtl" src="recursos/obj/DeadTree.mtl"></a-asset-item>
+				<a-asset-item id="objecte1" src="recursos/obj/Low-Poly_airship.obj"></a-asset-item>
+				<a-asset-item id="objecte-mtl1" src="recursos/obj/Low-Poly_airship.mtl"></a-asset-item>
+			</a-assets>
+			<a-entity id="arbol3d" obj-model="obj: #objecte; mtl: #objecte-mtl" position="15 0 0" scale="2 2 2" ></a-entity>
+			<a-entity id="avion3d" obj-model="obj: #objecte1; mtl: #objecte-mtl1" position="-40 30 -15" rotation="0 -25 0">
+				<a-animation attribute="position" dur="20000" to="40 30 -15" repeat="indefinite"></a-animation>
+			</a-entity>
+			<a-cylinder geometry="height: 0.6; radius: 38" id="suelo" src="#cesped"></a-cylinder>
+			<a-box geometry="depth: 0.25; height: 15; width: 15" position="0 7.5 -14" id="pared_trasera" src="#ladrillos"></a-box>
+			<a-box geometry="height: 7.5; width: 15; depth: 0.25" position="0 11.22 0" id="pared_dsup" src="#ladrillos"></a-box>
+			<a-box geometry="height: 7.5; width: 5; depth: 0.25" position="-5 3.74 0" id="pared_diz" src="#ladrillos"></a-box>
+			<a-box geometry="height: 7.5; width: 5; depth: 0.25" position="5 3.74 0" id="pared_dder" src="#ladrillos"></a-box>
+			<a-box geometry="height: 7.5; width: 5; depth: 0.25" position="0 3.74 0" id="pared_puerta" src="#puerta">
+				<a-animation attribute="rotation" begin="click" dur="1000" to="0 90 0"></a-animation>
+				<a-animation attribute="position" begin="click" dur="1000" to="-2.5 3.74 -2.5"></a-animation>
+			</a-box>
+			<a-plane geometry="height: 1; width: 7" text__título="align: center; value:Click en la puerta para abrir; width: 10" position="0 9 1"></a-plane>
+			<a-box geometry="height: 15; width: 14; depth: 0.25" position="-7.5 7.5 -6.962" rotation="0 90 0" id="pared_izquierda" src="#ladrillos"></a-box>
+			<a-box geometry="height: 15; width: 14; depth: 0.25" position="7.5 7.5 -6.962" rotation="0 90 0" id="pared_derecha" src="#ladrillos"></a-box>
+			<a-cone geometry="height: 10; segmentsHeight: 1; radiusBottom: 12" position="0 20 -6.89" id="techo" src="#techo"></a-cone>
+			<a-plane color="blue" geometry="height: 2; width: 9" text__título="align: center; value: Bienvenido a la casa del entretenimiento!; width: 10" position="0 9 -13" id="título"></a-plane>
+			<a-link href="recursos/domino.html" image="#iconodom" title="Domino" geometry="width: 3; height: 2" position="-2 5.5 -13" ></a-link>
+			<a-link href="recursos/piano.html" image="#iconomus" title="Musica" geometry="width: 3; height: 2" position="1.1 5.5 -13" ></a-link>
+			<a-camera position="0 2.5 30" rotation="0 0 0">
+				<a-cursor color="#66ffff"></a-cursor>
+			</a-camera>
+		</a-scene>
+	</body>
+</html>
